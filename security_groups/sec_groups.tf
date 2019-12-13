@@ -88,7 +88,7 @@ resource "aws_security_group" "sec_group_for_database" {
   }
 
   tags = {
-    Name = "sec_group_for_database1"
+    Name = "sec_group_for_database"
   }
 }
 
