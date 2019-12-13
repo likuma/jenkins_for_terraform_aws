@@ -45,12 +45,12 @@ resource "aws_security_group" "sec_group_for_http_and_ssh_icmp" {
 }
 
 
-#sec group for mySQL and PostgreSQL 
+#security group for mySQL and PostgreSQL 
 
 resource "aws_security_group" "sec_group_for_database" {
   vpc_id      = data.aws_vpc.default_vpc_attrs.id #data selected in vars.tf
-  name        = "sec_group_for_http_and_ssh_icmp"
-  description = "sec_group_for_http_and_ssh_icmp"
+  name        = "sec_group_for_database"
+  description = "sec_group_for_database"
 
   ingress {
     to_port     = 22 #ssh port
