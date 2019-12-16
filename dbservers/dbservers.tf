@@ -34,7 +34,7 @@ resource "aws_instance" "db_postgresql_server" {
                 yum install postgresql-server -y
                 /usr/bin/postgresql-setup --initdb
                 systemctl start  postgresql
-                systemctl enable  postgresql
+                systemctl enable  postgresq
 
   EOF
 }
