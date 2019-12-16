@@ -1,5 +1,6 @@
 variable "AWS_REGION" {
   default = "eu-central-1"
+  description = "Frankfurt region"
 }
 variable "DEFAULT_VPC_ID" {
   default = "vpc-0b0e0d07c070958e4"
