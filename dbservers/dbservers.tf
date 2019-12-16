@@ -14,7 +14,7 @@ resource "aws_instance" "db_mysql_server" {
                 yum update -y
                 yum install mysql-server -y
                 systemctl start mysqld
-                systemctl enable  mysqld
+                systemctl enable  mysql
   EOF
 }
 #For Atos community - mysql and postgersql servers
