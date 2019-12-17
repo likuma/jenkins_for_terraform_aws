@@ -17,7 +17,7 @@ resource "aws_instance" "http_server" {
                 systemctl enable httpd
                 chkconfig httpd on
                 yum install php php-mysqlnd php-cli -y
-                systemctl restart http
+                systemctl restart httpd
                 
   EOF
 }
