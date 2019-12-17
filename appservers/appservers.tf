@@ -20,5 +20,4 @@ resource "aws_instance" "http_server" {
                 systemctl restart httpd
                 
   EOF
-
 }
