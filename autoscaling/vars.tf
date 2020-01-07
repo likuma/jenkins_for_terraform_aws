@@ -127,3 +127,4 @@ variable "MAX_SIZE" {
 variable "DESIERD_CAPACITY" {
   default = 2
 }
+#end 
