@@ -98,7 +98,6 @@ resource "aws_launch_configuration" "lanuch_config_for_http_server" {
                 EOFF
   EOF
 }
-
 resource "aws_autoscaling_group" "asg_for_http_server" {
   name = "asg_for_http_server"
   launch_configuration = aws_launch_configuration.lanuch_config_for_http_server.id
