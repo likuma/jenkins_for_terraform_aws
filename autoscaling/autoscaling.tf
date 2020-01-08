@@ -22,7 +22,6 @@ resource "aws_elb" "elb-for-asg-http-services" {
   }
 }
 
-
 resource "aws_launch_configuration" "lanuch_config_for_http_server" {
   name = "lanuch_config_for_http_server"
   image_id = data.aws_ami.ami_redhat_most_recent.id
