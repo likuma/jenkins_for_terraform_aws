@@ -109,7 +109,7 @@ resource "aws_autoscaling_group" "asg_for_http_server" {
   desired_capacity = var.DESIERD_CAPACITY
 
  # load_balancers = [data.aws_elb.elb-for-asg-http-services.name]
-  load_balancers = ["elb-for-asg-http-services"]
+  load_balancers = [aws_elb.elb-for-asg-http-services.name]
   health_check_type = "ELB"
   tag {
     key = "Name"

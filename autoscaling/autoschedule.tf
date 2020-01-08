@@ -6,7 +6,8 @@ resource "aws_autoscaling_schedule" "ass_dec_for_http_server" {
   #start_time = "2020-01-04T16:15:00Z"
   #end_time = "2020-01-04T15:55:00Z"
   recurrence = "00,10,20,30,40,50 10-23 4-20 1-3 0-6" #every 10 mins. from 10hr to 23hr, from 4 to 20 day of Jan - Mar, from Sun to Mon 
-  autoscaling_group_name = "${aws_autoscaling_group.asg_for_http_server.name}" #deprecated syntax
+  #autoscaling_group_name = "${aws_autoscaling_group.asg_for_http_server.name}" #deprecated syntax
+  autoscaling_group_name = aws_autoscaling_group.asg_for_http_server.name #new sytnax
 
 
  }
