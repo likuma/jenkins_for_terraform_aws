@@ -58,7 +58,7 @@ resource "aws_launch_configuration" "lanuch_config_for_http_server" {
                   if (\$conn->connect_error) {
                      die("Connection failed: " . \$conn->connect_error);
                   }
-                   echo "<b>Connected successfully to MYSQL  database on server: $servername with user: $username </b><br><br>";
+                   echo "<b>Connected successfully to MYSQL  database on server: \$servername with user: \$username </b><br><br>";
                   \$sql="SHOW VARIABLES LIKE 'version%'";
                   //$result = mysqli_query(\$conn, \$sql);
                   if (\$result = mysqli_query(\$conn, \$sql)) {
@@ -81,7 +81,7 @@ resource "aws_launch_configuration" "lanuch_config_for_http_server" {
                  if(!\$connect){
                  echo "Error : Unable to open database\n";
                  }
-                  echo "<br><br><br><b>Connected successfully to database: $dbname on server: $host with user: $username </b><br> <br>";
+                  echo "<br><br><br><b>Connected successfully to database: $dbname on server: \$host with user: \$username </b><br> <br>";
                  \$result=pg_query(\$query);
                  echo "<table border=1>\n";
                  while (\$line = pg_fetch_array(\$result)) {
