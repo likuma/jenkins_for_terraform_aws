@@ -1,7 +1,7 @@
 data "aws_availability_zones" "all" {
 
 }
-
+#Elastic Load balancer for autoscalling group
 resource "aws_elb" "elb-for-asg-http-services" {
   name = "elb-for-asg-http-services"
   security_groups = [data.aws_security_group.sec_group_for_http_and_ssh_icmp_attrs.id]
